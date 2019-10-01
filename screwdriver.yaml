@@ -11,12 +11,12 @@ jobs:
 #      SD_COVERAGE_PLUGIN_ENABLED: false
 #    steps:
 #      - echo: echo test
-#  default_true_ops:
-#    requires: [ ~pr, ~commit ]
-#    steps:
-#      - echo: echo test
-#    environment:
-#      SD_SONAR_OPTS: '-Dsonar.sources=lib -Dsonar.javascript.lcov.reportPaths=artifacts/coverage/opts/lcov.info'
+  default_true_ops:
+    requires: [ ~pr, ~commit ]
+    steps:
+      - echo: echo test
+    environment:
+      SD_SONAR_OPTS: '-Dsonar.sources=lib -Dsonar.javascript.lcov.reportPaths=artifacts/coverage/opts/lcov.info'
 #  make_false_ops:
 #    requires: [ ~pr, ~commit ]
 #    steps:
